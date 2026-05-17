@@ -1,19 +1,25 @@
 # Web-van-don
 Xây dựng website quản lý vận đơn liên kết các hãng vận chuyển.
 
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+## Gioi thieu
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Day la ung dung Laravel phuc vu quan ly van don va ket noi nhieu hang van chuyen. Repository hien tai tap trung vao phan code chay du an, khong con thu muc tai lieu rieng `docs/`.
 
-## Tai lieu du an
+## Cau truc chinh
 
-- Chu thich chi tiet tung buoc xu ly toan du an: [docs/CHU_THICH_CHI_TIET_XU_LY_TOAN_DU_AN.md](docs/CHU_THICH_CHI_TIET_XU_LY_TOAN_DU_AN.md)
-- Chu thich tung file ma nguon noi bo: [docs/CHU_THICH_THEO_TUNG_FILE.md](docs/CHU_THICH_THEO_TUNG_FILE.md)
+- `app/`: controller, service, model va middleware cua ung dung
+- `database/`: migration, seeder, factory
+- `resources/`: giao dien va asset frontend
+- `routes/`: dinh tuyen web, auth, console
+- `tests/`: test feature va unit
+
+## Cau hinh nhanh
+
+1. Copy `.env.example` thanh `.env`
+2. Cau hinh DB va cac bien mo ta dich vu ben ngoai trong `config/services.php`
+3. Chay `composer install`
+4. Chay `php artisan key:generate`
+5. Chay `php artisan migrate`
 
 ## About Laravel
 
