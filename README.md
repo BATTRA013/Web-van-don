@@ -40,8 +40,20 @@ Ung dung duoc xay dung de phuc vu cac doi tuong sau:
 - `app/Models/`: model cho don hang, nha xe, doi soat va van don ngoai tuyen
 - `config/services.php`: cau hinh ket noi ben ngoai
 - `database/migrations/`: schema co so du lieu
+- `database/seeders/DatabaseSeeder.php`: du lieu mau khoi tao cho user, hang van chuyen, don hang va doi soat
 - `routes/web.php`: cac route dashboard va nghiep vu chinh
 - `tests/`: tap hop test cho cac luong nghiep vu
+
+## Database va du lieu mau
+
+He thong su dung migration de tao va dong bo schema cho cac bang chinh nhu `nguoi_dung`, `nha_xe`, `don_hang`, `chi_tiet_don_hang`, `hang_van_chuyen`, `doi_soat_cod` va `van_don_ngoai_tuyen`.
+
+Seeder chinh tai [database/seeders/DatabaseSeeder.php](database/seeders/DatabaseSeeder.php) tao san du lieu demo de test nhanh, gom:
+
+- 3 tai khoan mau cho `admin`, `chu_shop` va `quan_ly_chanh_xe`
+- du lieu mau cho `GHN` va `Viettel Post`
+- 2 `nha_xe` mau
+- don hang, chi tiet don hang, doi soat COD va van don ngoai tuyen mau
 
 ## Chay du an
 
