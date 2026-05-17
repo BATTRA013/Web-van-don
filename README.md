@@ -41,12 +41,13 @@ Ung dung duoc xay dung de phuc vu cac doi tuong sau:
 - `config/services.php`: cau hinh ket noi ben ngoai
 - `database/migrations/`: schema co so du lieu
 - `database/seeders/DatabaseSeeder.php`: du lieu mau khoi tao cho user, hang van chuyen, don hang va doi soat
+- `docs/Tài liệu báo cáo tốt nghiệp.7z`: goi tai lieu mo ta day du toan bo du an
 - `routes/web.php`: cac route dashboard va nghiep vu chinh
 - `tests/`: tap hop test cho cac luong nghiep vu
 
 ## Database va du lieu mau
 
-He thong su dung migration de tao va dong bo schema cho cac bang chinh nhu `nguoi_dung`, `nha_xe`, `don_hang`, `chi_tiet_don_hang`, `hang_van_chuyen`, `doi_soat_cod` va `van_don_ngoai_tuyen`.
+Tai lieu mo ta chi tiet toan bo du an nam trong [docs/Tài liệu báo cáo tốt nghiệp.7z]. Neu can giai thich nhanh, README nay chi tom tat nghiep vu chinh; phan mo ta day du hon nam trong goi tai lieu nay.
 
 Seeder chinh tai [database/seeders/DatabaseSeeder.php](database/seeders/DatabaseSeeder.php) tao san du lieu demo de test nhanh, gom:
 
@@ -64,7 +65,3 @@ Seeder chinh tai [database/seeders/DatabaseSeeder.php](database/seeders/Database
 5. Chay `php artisan key:generate`
 6. Chay `php artisan migrate`
 7. Chay `npm install` va `npm run dev` neu can build frontend
-
-## Ghi chu
-
-Repository hien tai khong con thu muc tai lieu rieng `docs/`. Neu can mo ta chi tiet hon, hay viet cac tai lieu moi gan voi nghiep vu hien tai thay vi tai dung mo ta chung cho Laravel.
