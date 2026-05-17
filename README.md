@@ -1,73 +1,58 @@
 # Web-van-don
-Xây dựng website quản lý vận đơn liên kết các hãng vận chuyển.
+He thong quan ly van don va doi soat cho mo hinh lam viec lien ket nhieu hang van chuyen. Du an tap trung vao nghiep vu thuc te: tao don, day sang doi tac van chuyen, dong bo trang thai, quan ly COD va phan quyen nguoi dung theo vai tro.
 
-## Gioi thieu
+## Tong quan
 
-Day la ung dung Laravel phuc vu quan ly van don va ket noi nhieu hang van chuyen. Repository hien tai tap trung vao phan code chay du an, khong con thu muc tai lieu rieng `docs/`.
+Ung dung duoc xay dung de phuc vu cac doi tuong sau:
 
-## Cau truc chinh
+- Chu shop: quan ly don hang, tao van don va theo doi trang thai
+- Quan ly chanh xe: xu ly van don ngoai tuyen, tiep nhan/tu choi va xac nhan bien lai
+- Admin: quan ly nguoi dung, cau hinh he thong va theo doi van hanh
 
-- `app/`: controller, service, model va middleware cua ung dung
-- `database/`: migration, seeder, factory
-- `resources/`: giao dien va asset frontend
-- `routes/`: dinh tuyen web, auth, console
-- `tests/`: test feature va unit
+## Tinh nang chinh
 
-## Cau hinh nhanh
+- Quan ly don hang noi bo theo CRUD day du
+- Tao van don da hang thong qua cac dich vu van chuyen ho tro
+- Dong bo trang thai van don theo tung don hoac dong loat
+- Quan ly van don ngoai tuyen qua kenh chanh xe
+- Quan ly cau hinh API/ket noi cho tung hang van chuyen
+- Doi soat COD va chay tac vu auto reconciliation
+- Quan ly nguoi dung va trang thai duyet tai khoan
+- Phan quyen truy cap theo vai tro va trang thai tai khoan
+
+## Vai tro nguoi dung
+
+- `admin`: co toan quyen, quan ly nguoi dung, nha xe, don hang, cau hinh va doi soat
+- `chu_shop`: quan ly don hang, cau hinh van chuyen, theo doi van hanh
+- `quan_ly_chanh_xe`: tiep nhan van don ngoai tuyen va cap nhat bien lai
+
+## Cong nghe chinh
+
+- PHP 8.2
+- Laravel 12
+- Frontend build voi Vite
+- Database migrations va test feature/unit
+
+## Cau truc thu muc
+
+- `app/Http/Controllers/`: logic API va nghiep vu
+- `app/Services/`: xu ly ket noi hang van chuyen va doi soat COD
+- `app/Models/`: model cho don hang, nha xe, doi soat va van don ngoai tuyen
+- `config/services.php`: cau hinh ket noi ben ngoai
+- `database/migrations/`: schema co so du lieu
+- `routes/web.php`: cac route dashboard va nghiep vu chinh
+- `tests/`: tap hop test cho cac luong nghiep vu
+
+## Chay du an
 
 1. Copy `.env.example` thanh `.env`
-2. Cau hinh DB va cac bien mo ta dich vu ben ngoai trong `config/services.php`
-3. Chay `composer install`
-4. Chay `php artisan key:generate`
-5. Chay `php artisan migrate`
+2. Cau hinh database va cac bien moi truong trong `.env`
+3. Cau hinh thong tin dich vu ben ngoai trong `config/services.php` neu can
+4. Chay `composer install`
+5. Chay `php artisan key:generate`
+6. Chay `php artisan migrate`
+7. Chay `npm install` va `npm run dev` neu can build frontend
 
-## About Laravel
+## Ghi chu
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Repository hien tai khong con thu muc tai lieu rieng `docs/`. Neu can mo ta chi tiet hon, hay viet cac tai lieu moi gan voi nghiep vu hien tai thay vi tai dung mo ta chung cho Laravel.
