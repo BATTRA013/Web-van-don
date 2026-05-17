@@ -1,0 +1,59 @@
+@layer components {
+    .admin-body {
+        @apply text-slate-900;
+        background-color: #e2e8f0;
+        background-image:
+            radial-gradient(circle at 10% 10%, rgba(14, 116, 144, 0.16), transparent 33%),
+            radial-gradient(circle at 88% 20%, rgba(15, 23, 42, 0.12), transparent 30%),
+            linear-gradient(150deg, #f8fafc 0%, #e2e8f0 54%, #dbeafe 100%);
+        background-attachment: fixed;
+    }
+
+    .admin-main {
+        @apply bg-transparent;
+    }
+
+    .admin-header {
+        @apply border-b border-slate-200/80 bg-white/80 backdrop-blur;
+    }
+
+    .admin-sidebar {
+        @apply bg-slate-900 text-slate-200;
+    }
+
+    .admin-sidebar-brand {
+        @apply flex h-16 items-center border-b border-slate-800 px-5;
+    }
+
+    .admin-sidebar-link {
+        @apply flex items-center rounded-lg px-3 py-2 text-sm font-medium text-slate-300 transition hover:bg-slate-800 hover:text-white;
+    }
+
+    .admin-sidebar-link-active {
+        @apply bg-slate-800 text-white;
+    }
+
+    .admin-panel {
+        @apply rounded-xl border border-slate-200/80 bg-white/90 p-4 shadow-sm backdrop-blur sm:p-5;
+    }
+
+    .admin-panel-title {
+        @apply text-base font-semibold text-slate-900;
+    }
+
+    .admin-panel-desc {
+        @apply mt-1 text-sm text-slate-500;
+    }
+
+    .admin-table-head {
+        @apply bg-slate-100/80 text-left text-xs font-semibold uppercase tracking-wide text-slate-500;
+    }
+
+    .admin-table-body {
+        @apply divide-y divide-slate-100 bg-white/90 text-slate-700;
+    }
+
+    .admin-table-cell {
+        @apply px-4 py-3;
+    }
+}

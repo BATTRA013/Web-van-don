@@ -1,0 +1,92 @@
+@import './admin.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	body.app-theme-bg {
+		background-color: #e2e8f0;
+		background-image:
+			radial-gradient(circle at 8% 12%, rgba(14, 116, 144, 0.18), transparent 34%),
+			radial-gradient(circle at 86% 18%, rgba(15, 23, 42, 0.12), transparent 30%),
+			linear-gradient(145deg, #f8fafc 0%, #e2e8f0 52%, #dbeafe 100%);
+		background-attachment: fixed;
+	}
+}
+
+@layer components {
+	.app-surface {
+		@apply rounded-2xl border border-slate-200/80 bg-white/90 shadow-sm backdrop-blur;
+	}
+
+	.btn-base {
+		@apply inline-flex items-center justify-center rounded-lg border px-4 py-2 text-sm font-semibold transition focus:outline-none focus:ring-2 focus:ring-offset-2;
+	}
+
+	.btn-primary {
+		@apply btn-base border-transparent bg-cyan-700 text-white hover:bg-cyan-800 focus:ring-cyan-600;
+	}
+
+	.btn-secondary {
+		@apply btn-base border-slate-300 bg-white text-slate-700 hover:bg-slate-50 focus:ring-slate-400;
+	}
+
+	.btn-success {
+		@apply btn-base border-transparent bg-emerald-600 text-white hover:bg-emerald-700 focus:ring-emerald-500;
+	}
+
+	.btn-danger {
+		@apply btn-base border-transparent bg-rose-600 text-white hover:bg-rose-700 focus:ring-rose-500;
+	}
+
+	.status-badge {
+		@apply inline-flex rounded-full border px-2.5 py-1 text-xs font-semibold;
+	}
+
+	.status-badge-info {
+		@apply border-cyan-200 bg-cyan-50 text-cyan-700;
+	}
+
+	.status-badge-pending {
+		@apply border-amber-200 bg-amber-50 text-amber-700;
+	}
+
+	.status-badge-success {
+		@apply border-emerald-200 bg-emerald-50 text-emerald-700;
+	}
+
+	.status-badge-danger {
+		@apply border-rose-200 bg-rose-50 text-rose-700;
+	}
+
+	.status-badge-default {
+		@apply border-slate-200 bg-slate-100 text-slate-700;
+	}
+
+	.table-surface {
+		@apply overflow-x-auto rounded-xl border border-slate-200/80 bg-white/90 shadow-sm backdrop-blur;
+	}
+
+	.app-pagination nav[role='navigation'] {
+		@apply mt-4 flex items-center justify-between gap-3;
+	}
+
+	.app-pagination nav[role='navigation'] a,
+	.app-pagination nav[role='navigation'] span[aria-disabled='true'] > span,
+	.app-pagination nav[role='navigation'] span[aria-current='page'] > span {
+		@apply inline-flex items-center border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-700 shadow-sm;
+	}
+
+	.app-pagination nav[role='navigation'] a:hover {
+		@apply bg-slate-50;
+	}
+
+	.app-pagination nav[role='navigation'] span[aria-current='page'] > span {
+		@apply border-cyan-300 bg-cyan-700 text-white;
+	}
+
+	.app-pagination nav[role='navigation'] p {
+		@apply text-sm text-slate-600;
+	}
+}
